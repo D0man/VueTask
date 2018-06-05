@@ -44,7 +44,7 @@ ul{
 .button{
   flex: 1;
   color:#000;
-
+  cursor: pointer;
   font-size:18px;
   line-height: 30px;
 }
