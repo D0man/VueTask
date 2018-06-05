@@ -31,7 +31,7 @@
             },
             removeTask(){
             this.taskList.pop();
-            if (this.taskList.length == 0) this.disabled=true;
+            if (this.taskList.length === 0) this.disabled=true;
             },
             clearTasks(){
             this.taskList = [];
