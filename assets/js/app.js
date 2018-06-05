@@ -4,10 +4,10 @@
                         <button @click="addTask" class="button button--add">
                         Add
                         </button>
-                        <button v-if="taskList.length" @click="removeTask" class="button button--remove">
+                        <button :disabled="disabled" @click="removeTask" class="button button--remove">
                         Remove
                         </button>
-                        <button v-if="taskList.length"  @click="clearTasks" class=" button button--clear">
+                        <button :disabled="disabled"  @click="clearTasks" class=" button button--clear">
                         Clear
                         </button>
                     </div>
@@ -20,18 +20,22 @@
         data: function() {
           return {
             taskList: [],
-            taskName: 'Task number'
+            taskName: 'Task number',
+            disabled: true
           }
         },
         methods: {
             addTask(){
             this.taskList.push(this.taskName);
+            this.disabled = false;
             },
             removeTask(){
             this.taskList.pop();
+            if (this.taskList.length == 0) this.disabled=true;
             },
             clearTasks(){
             this.taskList = [];
+            this.disabled = true;
             },
         }
     });

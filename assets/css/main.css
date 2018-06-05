@@ -52,6 +52,12 @@ ul{
     opacity:0.8;
     color: #FFF;
 }
+.button:disabled{
+    background: #ccc;
+    opacity: 1;
+    color: #000;
+    cursor: not-allowed;
+}
 .button--add{
     background: #92C8A8;
 }
