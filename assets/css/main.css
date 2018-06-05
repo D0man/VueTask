@@ -21,6 +21,10 @@ button{
 ul{
     list-style: none;
 }
+.title{
+    color:white;
+    font-size: 2.5em;
+}
 .container{
     max-height: 90Vh;
     overflow-y: auto;
