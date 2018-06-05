@@ -1,0 +1,79 @@
+/* background color and very simple reset*/
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: linear-gradient(to bottom, #020000 0%, #14172b 100%);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}
+button{
+    border:0;
+    outline: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    max-height: 90Vh;
+    overflow-y: auto;
+    width: 100%;
+    max-width: 720px;;
+    margin: 10px auto;
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 14px 28px rgba(158, 158, 158, 0.3), 0 10px 10px rgba(158,158,158,0.25);
+}
+.container__buttons{
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    border-bottom: 1px solid #000;
+    display: flex;
+}
+.button{
+  flex: 1;
+  color:#000;
+
+  font-size:18px;
+  line-height: 30px;
+}
+.button:hover{
+    opacity:0.8;
+    color: #FFF;
+}
+.button--add{
+    background: #92C8A8;
+}
+.button--remove{
+    background: #874F52;
+}
+.button--clear{
+    background: #777DA6;
+}
+.task{
+    font-size: 20px;
+    text-align: center;
+    padding:5px 0;
+}
+.task:nth-child(2n){
+    background: #F5F5F5;
+}
+.task:hover{
+    background: #020000;
+    color: #fff;
+}
+.task-enter-active, .task-leave-active {
+    transition: opacity 0.5s, transform 0.5s;
+    transform-origin: bottom center;
+}
+.task-enter, .task-leave-to {
+    opacity: 0;
+    transform: scale(0.4);
+  }
